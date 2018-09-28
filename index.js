@@ -62,16 +62,19 @@ var animals = [
 //controllers
 const showOneAnimal = (req, res) => {
     res.status(200).send(animals[1]);
+    return;
 }
 
 const getAnimals = (req, res) => {
     res.status(200).send(animals);
+    return;
 }
 
 const showAnimalById = (req, res) => {
     const animalId = req.params.id;
     for(var i=animalId;i<animals.length;i++){
         res.status(200).send(animals[i]);
+        return;
     }
 }
 
